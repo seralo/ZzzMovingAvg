@@ -1,13 +1,13 @@
 {
   "name": "ZzzMovingAvg",
-  "keywords": "moving-average, filter, average, processing",
-  "description": "Simple Arduino / C++ library to compute moving average ",
+  "keywords": "moving-average, filter, average, processing, boxcar",
+  "description": "Simple Arduino / C++ library to compute moving average",
   "authors": {
     "name": "Seralo",
     "email": "seralo@free.fr",
     "url": "https://github.com/seralo/ZzzMovingAvg"
   },
-  "version": "0.9",
+  "version": "1.0",
   "frameworks": "arduino",
   "platforms": "*"
 }

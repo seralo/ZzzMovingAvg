@@ -29,8 +29,8 @@ T add()                // Add a new value to the moving average
 T get()                // Get the current moving average value (same as the last add return value)
 T last(size_t back=0)  // Get raw value added previously. No param will get the last added value. 1 will get the previous added value... up to size()-1.
 size_t size()          // Return the number of values used for the moving average, or the number of value it could get using last()
-reset()                // Reset the average values
-fill()                 // Fill the buffer with all identical values
+void reset()                // Reset the average values
+void fill()                 // Fill the buffer with all identical values
 ```
 
 ### Included examples
@@ -46,16 +46,16 @@ fill()                 // Fill the buffer with all identical values
 
 ZzzMovingAvg <4> avg;
 
-void setup() 
+void setup()
 {
     ...
-}  
+}
 
-void loop() 
-{ 
+void loop()
+{
     ...
 
-    int avgSensorValue=avg.add(mySensorValue);
+    int avgSensorValue = avg.add(mySensorValue);
 
     ...
 }
@@ -68,16 +68,16 @@ void loop()
 
 ZzzMovingAvg <16, float, float> avg;
 
-void setup() 
+void setup()
 {
     ...
-}  
+}
 
-void loop() 
-{ 
+void loop()
+{
     ...
 
-    float avgSensorValue=avg.add(mySensorValue);
+    float avgSensorValue = avg.add(mySensorValue);
 
     ...
 }
