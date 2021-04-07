@@ -8,7 +8,7 @@
  * Compute Simple moving average (boxcar filter)
  * https://en.wikipedia.org/wiki/Moving_average
  *
- * N     is the number of values to smooth the data (default=4). Should be a power of 2 (2,4,8,16,32...) to optimize computation at compile time.
+ * N     is the number of values to smooth the data (default=4). Could be a power of 2 (2,4,8,16,32...) to optimize computation at compile time.
  * T     is the type of data (default=int). Could be uint8_t, int8_t, uint16_t, int, float...
  * TSUM  is the type of the sum (default=long). Should be able to contain N*data without overflowing.
  *       if N is 8 and values could go up to 100, then T could be uint8_t (max=255) and TSUM should at least be uint16_t (max=65535).
