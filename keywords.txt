@@ -1,0 +1,22 @@
+#######################################
+# Syntax Coloring Map
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+ZzzMovingAvg	KEYWORD1	ZzzMovingAvg
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+reset	KEYWORD2
+add	KEYWORD2
+get	KEYWORD2
+fill	KEYWORD2
+getLast	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
