@@ -44,7 +44,7 @@ void setup() {
 
 	Serial.print("Last added values: ");
 	Serial.print(avg.getLast());
-	for(int i=1;i<avg.size();i++) {
+	for(size_t i=1;i<avg.size();i++) {
 		Serial.print(' ');
 		Serial.print(avg.getLast(i));
 	}
