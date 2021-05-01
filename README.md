@@ -2,7 +2,7 @@
 Simple Arduino / C++ library to compute moving average
 
 
-The library consist of a single header file (ZzzMovingAvg.h) containing a template class.
+The library consist of a single header file (ZzzMovingAvg.h) containing template classes.
 
 The template has 3 parameters
  * N     is the number of values to smooth the data (default=4). Could be a power of 2 (2,4,8,16,32...) to optimize computation at compile time.
@@ -25,12 +25,12 @@ ZzzMovingAvg <16, float, float> avg; //Constructor with 16 values, and float as 
 ### Functions
 
 ```cpp
-T add()                // Add a new value to the moving average
-T get()                // Get the current moving average value (same as the last add return value)
-T last(size_t back=0)  // Get raw value added previously. No param will get the last added value. 1 will get the previous added value... up to size()-1.
-size_t size()          // Return the number of values used for the moving average, or the number of value it could get using last()
-void reset()                // Reset the average values
-void fill()                 // Fill the buffer with all identical values
+T add();                // Add a new value to the moving average
+T get();                // Get the current moving average value (same as the last add return value)
+T last(size_t back=0);  // Get raw value added previously. No param will get the last added value. 1 will get the previous added value... up to size()-1.
+size_t size();          // Return the number of values used for the moving average, or the number of value it could get using last()
+void reset();           // Reset the average values
+void fill();            // Fill the buffer with all identical values
 ```
 
 ### Included examples
