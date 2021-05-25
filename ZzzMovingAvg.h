@@ -25,7 +25,7 @@
  * TSUM  is the type of the sum (default=long). Should be able to contain N*data without overflowing.
  *       if N is 8 and values could go up to 100, then T could be uint8_t (max=255) and TSUM should at least be uint16_t (max=65535).
  */
-template <size_t N=4,typename T=int, typename TSUM=long, T DEFAULT_RESULT=-1> class ZzzMovingAvg : public ZzzData<T> {
+template <size_t N=4, typename T=int, typename TSUM=long, T DEFAULT_RESULT=-1> class ZzzMovingAvg : public ZzzData<T> {
 	private:
 		T _data[N];
 		T _result;
