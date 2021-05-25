@@ -4,6 +4,7 @@
 #ifndef ZZZ_MOVING_AVG_H
 #define ZZZ_MOVING_AVG_H
 
+
 /**
  * Abstract class to define default data manipulation functions.
  *
@@ -174,7 +175,7 @@ template <size_t N,typename T=int> class ZzzDataHistory : public ZzzData<T> {
  * TSUM  is the type of the sum (default=long). Should be able to contain N*data without overflowing.
  *       if N is 8 and values could go up to 100, then T could be uint8_t (max=255) and TSUM should at least be uint16_t (max=65535).
  */
-template <size_t N=4,typename T=int, typename TSUM=long> class ZzzMovingAvg : public ZzzData<T> {
+template <size_t N=4,typename T=int, typename TSUM=long, int DEFAULT_RESULT=-1> class ZzzMovingAvg : public ZzzData<T> {
 	private:
 		T _data[N];
 		T _result;
@@ -188,7 +189,7 @@ template <size_t N=4,typename T=int, typename TSUM=long> class ZzzMovingAvg : pu
 			_first=true;
 			_current=N-1;
 			_sum=0;
-			_result=0;
+			_result=DEFAULT_RESULT;
 		}
 
 		/** Fill all values with given value and set result to value */
